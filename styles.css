@@ -35,7 +35,7 @@ p {
 }
 
 a {
-  color: rgb(212, 117, 27);
+  color: #095F73;
   font-size: 20px;
   text-decoration: none;
   font-weight: 300;
@@ -86,13 +86,46 @@ a {
 	color: rgb(255, 255, 255);
 }
 
+.dark a {
+  color: #F2D272;
+}
+
 .main {
-	height: 80vh;
+	height: 60vh;
+  display: flex;
+  flex-direction: row;
 }
 
 .main-text {
-	width: 50vw;
 	padding: 30px;
+}
+
+.hero {
+  position: relative;
+  width: 50%;
+  height: 350px;
+  display: block;
+}
+
+.hero-image {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+nav {
+  display: flex;
+}
+
+.nav-bar {
+	display: flex;
+	list-style-type: none;
+	text-transform: uppercase;
+  padding: 0px;
+}
+
+li {
+  margin: 0 20px 0 0;
 }
 
 .square {
@@ -124,9 +157,18 @@ footer {
 }
 
 @media only screen and (min-width: 970px) {
+  .main-text {
+    width: 50vw;
+  }
 	.square {
 		width: 48%;
 		height: 600px;
 		margin: 1%;
 	}
+}
+
+@media only screen and (max-width: 1000px) {
+  .hero-image {
+    display: none;
+  }
 }
